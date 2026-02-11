@@ -8,8 +8,11 @@ Thumbs.db
 *~
 
 # Personal data
-USER.md
 IDENTITY.md
+
+# Profiles - personal data, not tracked in git
+profiles/*
+!profiles/.gitkeep
 
 # Memory logs
 memory/

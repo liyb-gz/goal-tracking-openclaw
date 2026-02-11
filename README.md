@@ -44,7 +44,7 @@ Every session, the agent loads three core files:
 | ----------- | ----------------------------------------------------------- |
 | `SOUL.md`   | Coach persona — tone, values, boundaries                    |
 | `AGENTS.md` | Operating instructions — workflows, rules, error handling   |
-| `USER.md`   | Your profile — created during onboarding, updated over time |
+| `USER.md`   | Pointer to your profile in `profiles/{name}/profile.md`     |
 
 **Skills** are loaded on demand for specific sessions (goal-setting, summaries, etc.) rather than bloating every conversation with instructions that aren't needed.
 
@@ -121,7 +121,10 @@ Goals are organized across domains to encourage balance:
 ~/.openclaw/workspace/          (or custom path)
 ├── AGENTS.md                   # Operating instructions
 ├── SOUL.md                     # Coach persona
-├── USER.md                     # Your profile (created during onboard)
+├── USER.md                     # Pointer to profile (auto-loaded)
+├── profiles/
+│   └── {name}/
+│       └── profile.md          # Your full profile (syncs with IDE version)
 ├── IDENTITY.md                 # Agent identity (auto-created)
 ├── TOOLS.md                    # Workspace conventions
 ├── HEARTBEAT.md                # Periodic coaching checks

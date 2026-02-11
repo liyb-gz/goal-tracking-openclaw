@@ -6,7 +6,7 @@
 |---|---|
 | `context/` | Coaching guides, option menus, research notes (read-only reference) |
 | `skills/` | Workspace skills for goal-setting and summary sessions |
-| `profiles/` | **Deprecated** — use `USER.md` instead |
+| `profiles/` | User profiles — `profiles/{name}/profile.md` |
 | `{year}/` | Goal and summary files organized by year/month |
 | `memory/` | Daily memory logs |
 

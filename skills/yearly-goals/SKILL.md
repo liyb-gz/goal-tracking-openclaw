@@ -9,7 +9,7 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/goal-setting-guide.
 ## Setup
 
 1. Note current time (from system prompt)
-2. Read USER.md
+2. Read the user's profile (path referenced in USER.md)
 3. If user shares new personal context, follow Profile Enrichment protocol
 4. Determine year (current or upcoming)
 5. Check if yearly file exists: `{year}/yearly-goals.md`
@@ -20,7 +20,7 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/goal-setting-guide.
 
 Follow goal-setting-guide.md:
 
-### For Each Active Domain (from USER.md)
+### For Each Active Domain (from profile)
 
 - Priority domains: deeper (2-3 goals)
 - Active domains: standard (1-2 goals)

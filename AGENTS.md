@@ -14,7 +14,7 @@ Skills replace slash commands. The user says what they want ("I want to set dail
 
 Every session, regardless of mode:
 
-1. **USER.md** -- Auto-loaded by the system. Contains profile, preferences, and coaching style.
+1. **USER.md** -- Auto-loaded by the system. Contains a pointer to the user's profile at `profiles/{name}/profile.md`. Read the profile file for preferences and coaching style.
 2. **context/coaching/coach-persona.md** -- Voice, tone, and coaching principles.
 3. **Today's memory** -- `memory/{YYYY-MM-DD}.md` if it exists.
 4. **Yesterday's memory** -- `memory/{YYYY-MM-DD}.md` for the prior day, if it exists.
@@ -36,7 +36,7 @@ Behavior adapts based on the user's request. Detect the mode from their input an
 Behavior:
 - Facilitate goal creation through adaptive dialogue
 - Reference parent goals to maintain alignment (see Goal Hierarchy below)
-- Apply user's chosen coaching methodology from USER.md
+- Apply user's chosen coaching methodology from their profile
 - Write goals to the appropriate dated file in `{year}/`
 
 ### Summary Mode
@@ -64,14 +64,14 @@ Behavior:
 
 ### Onboarding Mode
 
-**Trigger:** New user, missing USER.md, or user explicitly asks to onboard.
+**Trigger:** New user, no profile in `profiles/`, or user explicitly asks to onboard.
 **Skill:** `onboard`
 **Additional context:** All files from `context/core/` (life-domains, coaching-styles, data-sources)
 
 Behavior:
 - Welcome and explain the workspace
 - Walk through preference selections
-- Write profile to USER.md
+- Write profile to `profiles/{name}/profile.md` and create `USER.md` as a pointer
 
 ### Open Mode
 
@@ -141,12 +141,12 @@ Adjust throughout the session as the user warms up or tires out.
 
 **Read from:**
 - `context/` -- Coaching guides, option menus, research notes
-- `USER.md` -- User profile and preferences
+- `profiles/{name}/profile.md` -- User profile and preferences
 - `{year}/` -- Existing goals and summaries
 - `memory/` -- Session history
 
 **Write to:**
-- `USER.md` -- Profile updates and preference changes
+- `profiles/{name}/profile.md` -- Profile updates and preference changes
 - `{year}/` -- Goal and summary files
 - `memory/` -- Session outcome logs
 
@@ -234,9 +234,9 @@ The first time you notice personal context worth saving:
 1. Acknowledge the information naturally in conversation
 2. Ask: "That's useful context -- mind if I note it in your profile so I remember for future sessions?"
 3. Ask their ongoing preference: "Would you prefer I always ask before updating your profile, or just let you know after?"
-4. Save preference to USER.md under `## Preferences` as `Profile updates: ask-first` or `Profile updates: notify-after`
-5. Write the context to the appropriate USER.md section
-6. Update the `Last updated:` date in USER.md
+4. Save preference to the profile under `## Preferences` as `Profile updates: ask-first` or `Profile updates: notify-after`
+5. Write the context to the appropriate section in the profile
+6. Update the `Last updated:` date in the profile
 
 ### Subsequent updates
 
@@ -244,7 +244,7 @@ The first time you notice personal context worth saving:
 - If `notify-after`: Update, then say "I've noted [info] in your profile."
 - Always update the `Last updated:` date
 
-### Where to write in USER.md
+### Where to write in the profile
 
 | Information type | Section |
 |---|---|
@@ -264,7 +264,7 @@ When the user wants to add integrations or data sources:
 3. Present options and complexity level
 4. Guide through setup step-by-step
 5. Update the relevant configuration file
-6. Update USER.md with the new data source
+6. Update the user's profile with the new data source
 7. Test the integration
 
 ---
@@ -347,7 +347,7 @@ Heartbeat invocations arrive without a user message or with a system-level heart
 
 | Condition | Action |
 |---|---|
-| Missing USER.md | Prompt: "Let's get you set up -- want to run through onboarding?" |
+| Missing profile | Prompt: "Let's get you set up -- want to run through onboarding?" |
 | File exists when writing | Read first, offer to append or synthesize |
 | Parent goals changed since child goals set | Flag staleness in child goal sessions |
 | Missing context files | Proceed with available information, note what's missing |
@@ -361,7 +361,8 @@ Heartbeat invocations arrive without a user message or with a system-level heart
 | `SOUL.md` | Identity, voice, tone, research principles |
 | `TOOLS.md` | File layout, naming, goal format conventions |
 | `HEARTBEAT.md` | Heartbeat-specific checklist |
-| `USER.md` | User profile, preferences, coaching style |
+| `USER.md` | Pointer to user profile |
+| `profiles/{name}/profile.md` | User profile, preferences, coaching style |
 | `context/coaching/coach-persona.md` | Full coaching persona definition |
 | `context/coaching/goal-setting-guide.md` | Goal-setting session flow and methodology |
 | `context/coaching/summary-guide.md` | Reflection sessions, feedback loops |

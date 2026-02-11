@@ -9,7 +9,7 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/summary-guide.md`
 ## Setup
 
 1. Note current time (from system prompt)
-2. Read USER.md
+2. Read the user's profile (path referenced in USER.md)
 3. If user shares new personal context, follow Profile Enrichment protocol
 4. Read monthly goals: `{year}/{month}/monthly-goals.md`
 5. Read all weekly summaries: `{year}/{month}/week-*.md`

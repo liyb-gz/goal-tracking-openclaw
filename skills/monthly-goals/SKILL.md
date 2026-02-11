@@ -9,7 +9,7 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/goal-setting-guide.
 ## Setup
 
 1. Note current time (from system prompt)
-2. Read USER.md
+2. Read the user's profile (path referenced in USER.md)
 3. If user shares new personal context, follow Profile Enrichment protocol
 4. Determine month (current or upcoming)
 5. Read yearly goals: `{year}/yearly-goals.md`

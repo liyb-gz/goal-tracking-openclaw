@@ -9,7 +9,7 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/goal-setting-guide.
 ## Setup
 
 1. Note current time (from system prompt — no shell command needed)
-2. Read USER.md for preferences
+2. Read the user's profile (path referenced in USER.md) for preferences
 3. If user shares new personal context, follow Profile Enrichment protocol in AGENTS.md
 4. Determine target date: morning/midday = today, evening = offer choice
 5. Read monthly goals: `{year}/{month}/monthly-goals.md`

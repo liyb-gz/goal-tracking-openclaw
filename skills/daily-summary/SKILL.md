@@ -9,12 +9,12 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/summary-guide.md`
 ## Setup
 
 1. Note current time (from system prompt)
-2. Read USER.md for preferences
+2. Read the user's profile (path referenced in USER.md) for preferences
 3. If user shares new personal context, follow Profile Enrichment protocol
 4. Read today's file: `{year}/{month}/{YYYY-MM-DD}.md`
 5. Check for targets set this morning
 6. Check for mid-day completions (already marked `[x]` with timestamps)
-7. Query active data sources if configured in USER.md
+7. Query active data sources if configured in profile
 
 ## Session Flow (5-10 minutes)
 

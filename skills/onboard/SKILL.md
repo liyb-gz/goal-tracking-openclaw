@@ -36,21 +36,32 @@ Read: `context/coaching/coach-persona.md`, `context/core/coaching-styles.md`, `c
 ### 5. Create Profile
 
 - Summarize choices
-- Write to USER.md (OpenClaw standard user file)
+- Write profile to `profiles/{name}/profile.md`
+- Write `USER.md` as a pointer to the profile (see format below)
 - Confirm setup complete
 - Suggest: "Say 'I want to set yearly goals' to set your first goals"
 
-## USER.md Format
+## USER.md Format (pointer file)
 
 ```markdown
-# User: {Name}
+# User
+
+See `profiles/{name}/profile.md` for full profile.
+```
+
+## Profile Format
+
+Write to: `profiles/{name}/profile.md`
+
+```markdown
+# Profile: {Name}
 
 Created: {date}
 Last updated: {date}
 
 ## Preferences
 
-- Language: {language}
+- Language: {language} — conduct all sessions in this language
 - Timezone: {timezone}
 - Pronouns: {if shared}
 - Coach name: {Sage or custom}
@@ -66,6 +77,7 @@ Last updated: {date}
 ### Active
 
 - {Domain 3}
+- {Domain 4}
 
 ### Maintenance
 
@@ -73,19 +85,23 @@ Last updated: {date}
 
 ## Coaching Style
 
-{Description}
-Default: Domain-balanced + Energy-aware + Reflection-heavy + SMART-lite
-Adjustments: {any}
+{Description of selected or default style}
+
+Default combination: Domain-balanced + Energy-aware + Reflection-heavy + SMART-lite
+
+Adjustments: {any user modifications}
 
 ## Data Sources
 
 | Source | Status | Notes |
 |---|---|---|
 | Browser History | not configured | Interested |
+| Calendar | not configured | Interested |
+| {other} | not configured | |
 
 ## Notes
 
-{Context shared}
+{Any other relevant context the user shared}
 ```
 
 ## Tone
