@@ -8,27 +8,31 @@ An agentic workspace for goal setting and reflection, powered by an AI life coac
 
 ### Why OpenClaw Instead of an IDE?
 
-The IDE-based version (OpenCode/Cursor) only works when you have the editor open. That's fine for developers mid-session, but a life coach should be able to reach *you* — not wait for you to reach it.
+The IDE-based version (OpenCode/Cursor) only works when you have the editor open. That's fine for developers mid-session, but a life coach should be able to reach _you_ — not wait for you to reach it.
 
 OpenClaw enables **proactive coaching**: the agent can message you at the right times (morning targets, evening reflections, weekly check-ins) through whatever channel you already use. You don't need to open anything — Sage comes to you.
 
 ## Getting Started
 
 1. **Copy the workspace** to the default location:
-   ```bash
-   cp -r goal-tracking-openclaw/ ~/.openclaw/workspace/
-   ```
-   Or configure a custom path via `agents.defaults.workspace` in your OpenClaw config.
+
+    ```bash
+    cp -r goal-tracking-openclaw/ ~/.openclaw/workspace/
+    ```
+
+    Or configure a custom path via `agents.defaults.workspace` in your OpenClaw config.
 
 2. **Run setup** if this is your first time:
-   ```bash
-   openclaw setup
-   ```
+
+    ```bash
+    openclaw setup
+    ```
 
 3. **Start a conversation** and say:
-   > "I'd like to get started" or "onboard me"
 
-   This runs the onboarding skill, which creates your profile, sets your preferred language, and walks you through your first goals.
+    > "I'd like to get started" or "onboard me"
+
+    This runs the onboarding skill, which creates your profile, sets your preferred language, and walks you through your first goals.
 
 4. **Optional: Set up proactive reminders** via cron jobs. See [SETUP-CRON.md](SETUP-CRON.md) for details.
 
@@ -36,11 +40,11 @@ OpenClaw enables **proactive coaching**: the agent can message you at the right 
 
 Every session, the agent loads three core files:
 
-| File | Purpose |
-|------|---------|
-| `SOUL.md` | Coach persona — tone, values, boundaries |
-| `AGENTS.md` | Operating instructions — workflows, rules, error handling |
-| `USER.md` | Your profile — created during onboarding, updated over time |
+| File        | Purpose                                                     |
+| ----------- | ----------------------------------------------------------- |
+| `SOUL.md`   | Coach persona — tone, values, boundaries                    |
+| `AGENTS.md` | Operating instructions — workflows, rules, error handling   |
+| `USER.md`   | Your profile — created during onboarding, updated over time |
 
 **Skills** are loaded on demand for specific sessions (goal-setting, summaries, etc.) rather than bloating every conversation with instructions that aren't needed.
 
@@ -50,17 +54,17 @@ Every session, the agent loads three core files:
 
 ## Available Skills
 
-| Skill | Purpose |
-|-------|---------|
-| `onboard` | Initial setup — profile creation, preferences, first goals |
-| `yearly-goals` | Set or review yearly goals |
-| `monthly-goals` | Set or review monthly goals |
-| `daily-targets` | Set targets for today or tomorrow |
-| `daily-summary` | Quick end-of-day reflection |
-| `weekly-summary` | Weekly reflection and rollup |
-| `monthly-summary` | End-of-month reflection |
-| `yearly-summary` | Deep end-of-year reflection |
-| `end-of-day` | Combined daily summary + tomorrow's targets |
+| Skill             | Purpose                                                    |
+| ----------------- | ---------------------------------------------------------- |
+| `onboard`         | Initial setup — profile creation, preferences, first goals |
+| `yearly-goals`    | Set or review yearly goals                                 |
+| `monthly-goals`   | Set or review monthly goals                                |
+| `daily-targets`   | Set targets for today or tomorrow                          |
+| `daily-summary`   | Quick end-of-day reflection                                |
+| `weekly-summary`  | Weekly reflection and rollup                               |
+| `monthly-summary` | End-of-month reflection                                    |
+| `yearly-summary`  | Deep end-of-year reflection                                |
+| `end-of-day`      | Combined daily summary + tomorrow's targets                |
 
 ## Proactive Coaching
 
@@ -73,15 +77,15 @@ See [SETUP-CRON.md](SETUP-CRON.md) for configuration instructions.
 
 ## Coaching Methodology
 
-| Principle | What It Means |
-|-----------|---------------|
-| **Process-goal focused** | Steers toward controllable daily behaviors, not just outcomes |
-| **Domain-balanced** | Tracks goals across all life domains, not just work |
-| **Energy-aware** | Considers energy levels and capacity, not just ambition |
-| **Motivation-aware** | Explores *why* behind goals — approach reasons over avoidance reasons |
-| **Reflection-heavy** | Regular summaries and check-ins are the mechanism, not optional extras |
-| **Flexibility-first** | Revising goals is self-awareness, not failure |
-| **SMART-lite** | Specific and measurable where helpful, without bureaucratic rigidity |
+| Principle                | What It Means                                                          |
+| ------------------------ | ---------------------------------------------------------------------- |
+| **Process-goal focused** | Steers toward controllable daily behaviors, not just outcomes          |
+| **Domain-balanced**      | Tracks goals across all life domains, not just work                    |
+| **Energy-aware**         | Considers energy levels and capacity, not just ambition                |
+| **Motivation-aware**     | Explores _why_ behind goals — approach reasons over avoidance reasons  |
+| **Reflection-heavy**     | Regular summaries and check-ins are the mechanism, not optional extras |
+| **Flexibility-first**    | Revising goals is self-awareness, not failure                          |
+| **SMART-lite**           | Specific and measurable where helpful, without bureaucratic rigidity   |
 
 ## Research Foundation
 
@@ -178,7 +182,7 @@ Your preferred language is set during onboarding. Sage will conduct all sessions
 
 ## Migration from OpenCode/Cursor
 
-This workspace was migrated from the [OpenCode/Cursor goal-tracking workspace](https://github.com/felixflores/goal-tracking-workspace). The core coaching methodology, persona, and research foundation are identical. The key differences are:
+This workspace was migrated from the [OpenCode/Cursor goal-tracking workspace](https://github.com/liyb-gz/goal-tracking-workspace). The core coaching methodology, persona, and research foundation are identical. The key differences are:
 
 - **Proactive messaging** via heartbeat and cron (not available in IDE-based versions)
 - **Skills** replace slash commands (same content, different loading mechanism)
