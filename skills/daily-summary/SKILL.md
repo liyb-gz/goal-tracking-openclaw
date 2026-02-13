@@ -38,6 +38,12 @@ Always:
 - Tired: 3 questions max
 - Want to process: give space
 
+## Future-Facing Targets
+
+Some targets can't be assessed at summary time (e.g. "lights out by midnight" during a 6 PM session). Don't mark these complete or incomplete. Instead:
+- Note the intention is set and still ahead: `- [ ] {Target} \`{Domain}\` — pending tonight`
+- Follow up in the next day's session to confirm whether it was met
+
 ## Output
 
 Update: `{year}/{month}/{YYYY-MM-DD}.md`

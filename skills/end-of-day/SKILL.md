@@ -30,6 +30,8 @@ Read: `context/coaching/coach-persona.md`, `context/coaching/summary-guide.md`, 
 "Good. Now let's look at tomorrow..."
 Or if hard day: "Okay, let's set up tomorrow for a fresh start."
 
+**Future-facing targets** (e.g. sleep boundaries): If a target can't be assessed yet at summary time, carry it as "pending — check tomorrow" rather than marking it complete or incomplete. Note the intention was set; follow up in the next day's session.
+
 ### Part 2: Tomorrow's Targets (3-5 min)
 
 - Lighter touch since we just reflected

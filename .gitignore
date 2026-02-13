@@ -9,6 +9,7 @@ Thumbs.db
 
 # Personal data
 IDENTITY.md
+USER.md
 
 # Profiles - personal data, not tracked in git
 profiles/*
